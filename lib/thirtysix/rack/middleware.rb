@@ -34,7 +34,7 @@ module Thirtysix
       end
 
       def endpoint_uri
-        @endpoint_uri ||= ENV['THIRTYSIX_URL']
+        @endpoint_uri ||= URI(ENV['THIRTYSIX_URL'])
       end
 
       def push(app_request)
@@ -42,7 +42,7 @@ module Thirtysix
           http = Net::HTTP.new(endpoint_uri.host, endpoint_uri.port)
           http.open_timeout = 0.2
           http.read_timeout = 0.2
-          headers = {'Content-Type': 'text/json', 'X-THIRTYSIX-API_KEY': ENV['THIRTYSIX_API_KEY']}
+          headers = {'Content-Type' => 'text/json', 'X-THIRTYSIX-API-KEY' => ENV['THIRTYSIX_API_KEY']}
           request = Net::HTTP::Post.new(endpoint_uri.request_uri, headers)
           request.body = app_request.to_json
           response = http.request(request)
