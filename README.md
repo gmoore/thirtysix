@@ -6,7 +6,7 @@ A Rack middleware for instrumentation object creation in your rails app
 
 Include this in your Gemfile
 
-`gem "thirtysix", :require => 'thirtysix/rack/middleware`
+`gem 'thirtysix', :require => 'thirtysix/rack/middleware'`
 
 Set The following in your ENV
 
