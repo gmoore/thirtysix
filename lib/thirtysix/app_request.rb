@@ -14,7 +14,8 @@ module Thirtysix
                   :request_time_in_milliseconds,
                   :controller,
                   :action,
-                  :query_parameters
+                  :query_parameters,
+                  :memory_in_mb
 
     def build(start_objects, end_objects, env)
       @objects           = (end_objects[:T_OBJECT] || 0)  - (start_objects[:T_OBJECT] || 0)
@@ -45,7 +46,8 @@ module Thirtysix
         request_time_in_milliseconds: request_time_in_milliseconds,
         controller: controller,
         action: action,
-        query_parameters: query_parameters
+        query_parameters: query_parameters,
+        memory_in_mb: memory_in_mb
       }.to_json
     end
   end
