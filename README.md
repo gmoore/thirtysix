@@ -4,17 +4,18 @@ A Rack middleware for instrumentation object creation in your rails app
 
 ## Setup
 
-Include this in your Gemfile
+### Gemfile
+
+Include this in the Gemfile of the app you want to instrument
 
 `gem 'thirtysix', :require => 'thirtysix/rack/middleware'`
 
-Set The following in your ENV
+### Environment
 
-```
-THIRTYSIX_URL
-THIRTYSIX_API_KEY
-```
+Set the following environment variables
 
-`THIRTYSIX_URL` should point to an instance of the Thirtysix App which is collecting the instrumentation requests. Set this to the running instance at `http://www.thirtysix.tech`
+`THIRTYSIX_URL` set this to `http://www.thirtysix.tech`
 
-`THIRTYSIX_API_KEY` can be set to any of the values at `http://www.thirtysix.tech/api_keys`
+`THIRTYSIX_API_KEY`: An API key. Grab one from the [Valid API keys](http://www.thirtysix.tech/api_keys)
+
+See also [Thirtysix App](https://github.com/gmoore/thirtysixapp)
