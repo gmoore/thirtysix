@@ -1,6 +1,6 @@
 # Thirtysix
 
-A Rack middleware for instrumentation object creation in your rails app
+A Rack middleware for instrumenting object creation in your rails app
 
 ## Setup
 
